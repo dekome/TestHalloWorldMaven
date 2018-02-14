@@ -11,5 +11,8 @@ public class HelloWorldBox extends AnAction {
         String txt= Messages.showInputDialog(project, "What is your name?", "Input your name", Messages.getQuestionIcon());
         Messages.showMessageDialog(project, "Hello, " + txt + "!\n I am glad to see you.", "Information", Messages.getInformationIcon());
         Messages.showMessageDialog(project, "Hallo", "Was das denn Für nen käse", Messages.getInformationIcon());
+        com.github.javaparser.ast.CompilationUnit compilationUnit = com.github.javaparser.JavaParser.parse("class A {}");
+        Messages.showMessageDialog(project, "Hallo", "Was das denn Für nen käse"+ compilationUnit.getClaassByName("A"), Messages.getInformationIcon());
+
     }
 }
